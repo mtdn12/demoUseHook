@@ -3,7 +3,7 @@ import { useState } from 'react'
 const useLocalStorage = (key, initialvalue) => {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
-  const { storedValue, setStoredValue } = useState(() => {
+  const [storedValue, setStoredValue] = useState(() => {
     try {
       // Get from local storage by key
       const item = window.localStorage.getItem(key)
@@ -23,6 +23,7 @@ const useLocalStorage = (key, initialvalue) => {
       // save state
       setStoredValue(valueToStore)
       // Save to local storage
+      console.log('goes here')
       window.localStorage.setItem(key, JSON.stringify(valueToStore))
     } catch (error) {
       // A more advanced implementation would hadnle the error case

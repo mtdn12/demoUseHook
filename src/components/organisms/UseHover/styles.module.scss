@@ -1,0 +1,16 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.square1 {
+  height: 300px;
+  width: 300px;
+  background: #cacaca;
+}
+.square2 {
+  height: 400px;
+  width: 400px;
+  background: rgb(208, 174, 231);
+}
